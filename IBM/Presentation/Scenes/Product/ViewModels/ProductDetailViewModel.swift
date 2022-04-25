@@ -8,7 +8,6 @@
 import Foundation
 
 class ProductDetailViewModel {
-    
     public func getTotalAmount(product: Product, rates: [Rate]) -> String? {
         guard let transactions = product.transactions else { return nil }
         let currencyConverter = CurrencyConverter(rates: rates)

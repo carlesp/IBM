@@ -31,19 +31,8 @@ class HomeViewModel {
                     switch result {
                     case .success(let transactions):
                         self?.transactions = transactions
-                        
-                        var uniqueTransactions: [Transaction] = []
-                        for transaction in transactions {
-                            guard !uniqueTransactions.contains(where: { $0.sku == transaction.sku }) else { continue }
-                            uniqueTransactions.append(transaction)
-                        }
-                        
-                        let products: [Product] = uniqueTransactions.map({ (transaction) -> Product in
-                            Product(sky: transaction.sku,
-                                    transactions: transactions.filter( { $0.sku == transaction.sku }))
-                        })
+                        let products = self?.getProducts(from: transactions) ?? []
                         self?.productsList = products
-                        
                         completion(.success(products))
                     case .failure(let error):
                         completion(.failure(error))
@@ -54,5 +43,21 @@ class HomeViewModel {
             }
         })
     }
-    
+}
+
+extension HomeViewModel {
+    private func getProducts(from transactions: [Transaction]) -> [Product] {
+        var uniqueTransactions: [Transaction] = []
+        for transaction in transactions {
+            guard !uniqueTransactions.contains(where: { $0.sku == transaction.sku }) else { continue }
+            uniqueTransactions.append(transaction)
+        }
+        
+        let products: [Product] = uniqueTransactions.map({ (transaction) -> Product in
+            Product(sky: transaction.sku,
+                    transactions: transactions.filter( { $0.sku == transaction.sku }))
+        })
+        
+        return products
+    }
 }

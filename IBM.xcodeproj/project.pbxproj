@@ -45,6 +45,11 @@
 		A7506FB72815DAB6004796B4 /* TransactionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7506FB62815DAB6004796B4 /* TransactionCell.swift */; };
 		A7644C032815DDF800EB57D4 /* CurrencyConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7644C022815DDF800EB57D4 /* CurrencyConverter.swift */; };
 		A7A5D9602816877F0000A22C /* Decimal+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A5D95F2816877F0000A22C /* Decimal+Extension.swift */; };
+		A7A5D967281693EE0000A22C /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A5D966281693EE0000A22C /* MockApiManager.swift */; };
+		A7A5D96A281695100000A22C /* RatesRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A5D969281695100000A22C /* RatesRepositoryTest.swift */; };
+		A7A5D96D28169B290000A22C /* MethodMocked.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A5D96C28169B290000A22C /* MethodMocked.swift */; };
+		A7A5D96F28169C060000A22C /* CompletionResultCaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A5D96E28169C060000A22C /* CompletionResultCaptor.swift */; };
+		A7A5D97128169D8C0000A22C /* TransactionsRepositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A5D97028169D8C0000A22C /* TransactionsRepositoryTest.swift */; };
 		A7B7232F2811A4EE00E5172A /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B7232E2811A4EE00E5172A /* Rate.swift */; };
 		A7B723312811A7C400E5172A /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B723302811A7C400E5172A /* Transaction.swift */; };
 		A7B723332811A9EB00E5172A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7B723322811A9EB00E5172A /* Product.swift */; };
@@ -119,6 +124,11 @@
 		A7506FB62815DAB6004796B4 /* TransactionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCell.swift; sourceTree = "<group>"; };
 		A7644C022815DDF800EB57D4 /* CurrencyConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyConverter.swift; sourceTree = "<group>"; };
 		A7A5D95F2816877F0000A22C /* Decimal+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decimal+Extension.swift"; sourceTree = "<group>"; };
+		A7A5D966281693EE0000A22C /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
+		A7A5D969281695100000A22C /* RatesRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesRepositoryTest.swift; sourceTree = "<group>"; };
+		A7A5D96C28169B290000A22C /* MethodMocked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodMocked.swift; sourceTree = "<group>"; };
+		A7A5D96E28169C060000A22C /* CompletionResultCaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionResultCaptor.swift; sourceTree = "<group>"; };
+		A7A5D97028169D8C0000A22C /* TransactionsRepositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionsRepositoryTest.swift; sourceTree = "<group>"; };
 		A7B7232E2811A4EE00E5172A /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		A7B723302811A7C400E5172A /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		A7B723322811A9EB00E5172A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
@@ -424,6 +434,42 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		A7A5D962281693500000A22C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A7A5D96B28169B1E0000A22C /* Utils */,
+				A7A5D964281693660000A22C /* Network */,
+				A7A5D968281694ED0000A22C /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A7A5D964281693660000A22C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A7A5D966281693EE0000A22C /* MockApiManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A7A5D968281694ED0000A22C /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				A7A5D969281695100000A22C /* RatesRepositoryTest.swift */,
+				A7A5D97028169D8C0000A22C /* TransactionsRepositoryTest.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A7A5D96B28169B1E0000A22C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A7A5D96C28169B290000A22C /* MethodMocked.swift */,
+				A7A5D96E28169C060000A22C /* CompletionResultCaptor.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		A7B723272811A2DC00E5172A /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -539,6 +585,7 @@
 		A7D45E7C28119FBE0081F081 /* IBMTests */ = {
 			isa = PBXGroup;
 			children = (
+				A7A5D962281693500000A22C /* Data */,
 				A7D45E7D28119FBE0081F081 /* IBMTests.swift */,
 			);
 			path = IBMTests;
@@ -848,6 +895,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7A5D96A281695100000A22C /* RatesRepositoryTest.swift in Sources */,
+				A7A5D96D28169B290000A22C /* MethodMocked.swift in Sources */,
+				A7A5D967281693EE0000A22C /* MockApiManager.swift in Sources */,
+				A7A5D96F28169C060000A22C /* CompletionResultCaptor.swift in Sources */,
+				A7A5D97128169D8C0000A22C /* TransactionsRepositoryTest.swift in Sources */,
 				A7D45E7E28119FBE0081F081 /* IBMTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
